@@ -3,12 +3,12 @@
     <item
         android:id = "@+id/tab_map"
         android:enabled = "true"
-        android:icon = "@drawable/selector_map"
+        android:icon = "@drawable/ic_loc"
         android:title = "지도 보기"/>
 
     <item
         android:id = "@+id/tab_tracking"
         android:enabled = "true"
-        android:icon = "@drawable/selector_tracking"
+        android:icon = "@drawable/ic_tracking"
         android:title = "동선 보기"/>
 </menu>
