@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2e2e2e"
+    tools:context=".activity_signup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart = "40dp"
+        android:layout_marginEnd = "40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:text="회원가입"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailInput"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textColorHint="#efefef"
+            android:textColor="#efefef"
+            android:textSize="20sp"
+            android:backgroundTint = "#FFC557"
+            android:layout_gravity="center"
+            android:hint="E-mail"
+            android:layout_marginTop="90dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordInput"
+            android:textColorHint="#efefef"
+            android:textColor="#efefef"
+            android:inputType="textPassword"
+            android:backgroundTint = "#FFC557"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:hint="password"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordcheckInput"
+            android:textColorHint="#efefef"
+            android:textColor="#efefef"
+            android:inputType="textPassword"
+            android:backgroundTint = "#FFC557"
+            android:fontFamily="@font/nanumsquare_bold"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:hint="re-password"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:weightSum="1" >
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="SignUp"
+                android:id="@+id/signupButton"
+                android:fontFamily="@font/nanumsquare_bold"
+                android:textAllCaps="false"
+                android:textColor = "#2e2e2e"
+                android:layout_below="@+id/loginButton" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
