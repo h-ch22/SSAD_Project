@@ -2,6 +2,7 @@ package kr.ac.jbnu.se.ssad_group6.fragment;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -18,6 +19,7 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 import kr.ac.jbnu.se.ssad_group6.R;
+import kr.ac.jbnu.se.ssad_group6.listview.activity_userList;
 
 public class Fragment_tracking extends Fragment {
     private final Calendar calendar = Calendar.getInstance();
@@ -35,6 +37,7 @@ public class Fragment_tracking extends Fragment {
 
         Button btn_date = view.findViewById(R.id.btn_date);
         Button btn_time = view.findViewById(R.id.btn_time);
+        Button btn_next = view.findViewById(R.id.btn_next);
         CheckBox check_date = view.findViewById(R.id.checkbox_date);
         CheckBox check_time = view.findViewById(R.id.checkbox_time);
 
@@ -91,6 +94,14 @@ public class Fragment_tracking extends Fragment {
             }
         });
 
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), activity_userList.class) ;
+
+                startActivity(intent) ;
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
