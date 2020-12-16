@@ -39,7 +39,7 @@ public class Item {
 
     public String getMonth()
     {
-        SimpleDateFormat newDateFormat = new SimpleDateFormat("dd/MM");
+        SimpleDateFormat newDateFormat = new SimpleDateFormat("MM/dd");
         String MySDate = newDateFormat.format(this.makeDate);
         return MySDate;
     }

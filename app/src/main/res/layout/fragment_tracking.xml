@@ -6,7 +6,9 @@
     android:orientation="vertical"
     android:background="#2e2e2e"
     tools:context=".fragment.Fragment_tracking">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -100,7 +102,6 @@
             android:background="@drawable/btn_next"
             android:drawableEnd="@drawable/ic_next"
             android:paddingEnd="20dp"/>
-
     </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>
