@@ -19,15 +19,15 @@
             android:name = "com.naver.maps.map.CLIENT_ID"
             android:value="6a7xzofsj5"/>
 
-        <activity android:name=".activity_main">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name = "android.intent.action.MAIN"/>
                 <category android:name = "android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".listview.activity_userList"/>
+        <activity android:name=".listview.UserListActivity"/>
 
-<!--        <activity android:name=".mainPage.activity_main"/>-->
+<!--        <activity android:name=".mainPage.MainActivity"/>-->
 
     </application>
 

@@ -19,7 +19,7 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 
 import kr.ac.jbnu.se.ssad_group6.R;
-import kr.ac.jbnu.se.ssad_group6.listview.activity_userList;
+import kr.ac.jbnu.se.ssad_group6.listview.UserListActivity;
 
 public class Fragment_tracking extends Fragment {
     private final Calendar calendar = Calendar.getInstance();
@@ -28,6 +28,8 @@ public class Fragment_tracking extends Fragment {
     private int year = calendar.get(Calendar.YEAR);
     private int month = calendar.get(Calendar.MONTH);
     private int dayofMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
+    private String sendDateDataString = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,6 +70,7 @@ public class Fragment_tracking extends Fragment {
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
                         btn_date.setText(year + " - " + month + " - " + dayOfMonth + " 이후");
+                        sendDateDataString = (year + "," + month + "," + dayOfMonth);
                         check_date.setChecked(false);
                     }
                 }, year, month, dayofMonth);
@@ -86,6 +89,7 @@ public class Fragment_tracking extends Fragment {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         btn_time.setText(hourOfDay + " : " + minute + " 이후");
+                        sendDateDataString = (sendDateDataString + "," + hourOfDay + "," + minute);
                         check_time.setChecked(false);
                     }
                 }, hour, minute, android.text.format.DateFormat.is24HourFormat(getContext()));
@@ -97,9 +101,9 @@ public class Fragment_tracking extends Fragment {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), activity_userList.class) ;
-
-                startActivity(intent) ;
+                Intent intent = new Intent(getContext(), UserListActivity.class) ;
+                intent.putExtra("intentDate", sendDateDataString);
+                startActivity(intent);
             }
         });
         // Inflate the layout for this fragment

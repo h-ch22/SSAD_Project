@@ -21,7 +21,7 @@ import kr.ac.jbnu.se.ssad_group6.R;
 import kr.ac.jbnu.se.ssad_group6.fragment.Fragment_Map;
 import kr.ac.jbnu.se.ssad_group6.fragment.Fragment_tracking;
 
-public class activity_main extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     BottomNavigationView navigationView;
     Fragment_Map fragment_map;
     Fragment_tracking fragment_tracking;
